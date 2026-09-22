@@ -1,0 +1,105 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                   PORTFOLIO VIDÉO - INSTALLATION                     ║
+║              Tokou Zime Maximilien - Cotonou, Bénin                  ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+📍 EMPLACEMENT: C:\xampp\htdocs\portfolio\
+
+✅ ÉTAPE 1: BASE DE DONNÉES
+─────────────────────────────
+1. Démarrer XAMPP Control Panel
+2. Lancer Apache et MySQL
+3. Ouvrir un terminal et exécuter:
+   
+   cd C:\xampp\htdocs\portfolio
+   C:\xampp\mysql\bin\mysql -u root < data/schema.sql
+
+   ✓ Cela crée la base "portfolio_db" avec:
+     - Table users (admin)
+     - Table projects (2 projets de démo)
+
+✅ ÉTAPE 2: ACCÉDER AU SITE
+─────────────────────────────
+📌 Page publique (recruteurs):
+   → http://localhost/portfolio/
+
+📌 Espace admin:
+   → http://localhost/portfolio/admin/login.php
+   
+   Identifiants:
+   Username: admin
+   Password: admin2025!
+
+✅ ÉTAPE 3: UPLOADER VOS PROJETS
+─────────────────────────────────
+1. Se connecter en admin
+2. Cliquer "Nouveau projet"
+3. Remplir:
+   - Titre (ex: "Bande annonce événementiel 2025")
+   - Description
+   - Catégorie (montage, cadrage, motion, reportage, autre)
+   
+4. Choisir le type de média:
+   ☐ Upload fichier MP4/WebM (max 50 Mo)
+   ☐ Lien YouTube (coller l'URL complète)
+   ☐ Lien Vimeo (coller l'URL complète)
+
+5. (Optionnel) Ajouter une miniature (thumbnail)
+6. Cocher "Mettre en vedette" pour les meilleurs projets
+7. Cliquer "Créer le projet"
+
+✅ STRUCTURE CRÉÉE
+─────────────────────────────
+portfolio/
+├── 📄 index.php               → Page d'accueil publique
+├── 📁 admin/
+│   ├── login.php              → Connexion
+│   ├── index.php              → Dashboard
+│   ├── upload.php             → Créer/modifier projet
+│   ├── delete.php             → Supprimer
+│   └── logout.php             → Déconnexion
+├── 📁 includes/
+│   ├── db.php                 → Connexion MySQL
+│   ├── auth.php               → Gestion sessions
+│   └── functions.php          → Utilitaires
+├── 📁 assets/
+│   ├── css/style.css          → Design néon moderne (17 Ko)
+│   ├── js/main.js             → Animations (4 Ko)
+│   └── uploads/               → Fichiers uploadés
+└── 📁 data/
+    └── schema.sql             → Structure base de données
+
+🎨 DESIGN NÉON MODERNE
+─────────────────────────────
+• Fond noir profond (#0a0a0f)
+• Accents cyan électrique (#00f0ff)
+• Violet néon (#a855f7)
+• Animations fluides
+• Effet typewriter sur le nom
+• Grille filtrable par catégorie
+• 100% responsive
+
+🔒 SÉCURITÉ
+─────────────────────────────
+✓ Mots de passe hashés bcrypt
+✓ Protection CSRF
+✓ Sessions sécurisées
+✓ Validation uploads stricte
+✓ PDO prepared statements
+✓ Échappement XSS
+
+⚠️ IMPORTANT
+─────────────────────────────
+• Changer le mot de passe admin IMMÉDIATEMENT si en production
+• Vérifier que MySQL tourne avant d'accéder au site
+• Les vidéos YouTube/Vimeo sont recommandées (plus léger)
+
+📧 CONTACT
+─────────────────────────────
+Email: tokoumaximilien@gmail.com
+Tél: +229 01 94 95 77 75 / +229 01 47 15 60 53
+Localisation: Cotonou, Bénin
+
+═══════════════════════════════════════════════════════════════════════
+                    🎬 Bon usage de votre portfolio ! 🎬
+═══════════════════════════════════════════════════════════════════════
