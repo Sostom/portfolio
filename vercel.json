@@ -1,0 +1,26 @@
+{
+  "builds": [
+    {
+      "src": "index.php",
+      "use": "@vercel/php",
+      "config": {
+        "runtime": "php8.2"
+      }
+    },
+    {
+      "src": "admin/*.php",
+      "use": "@vercel/php",
+      "config": {
+        "runtime": "php8.2"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "index.php"
+    }
+  ],
+  "installCommand": "composer install",
+  "devCommand": "php -S localhost:3000"
+}
