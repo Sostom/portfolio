@@ -1,26 +1,26 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "index.php",
-      "use": "@vercel/php",
-      "config": {
-        "runtime": "php8.2"
-      }
+      "use": "@vercel/php"
     },
     {
-      "src": "admin/*.php",
-      "use": "@vercel/php",
-      "config": {
-        "runtime": "php8.2"
-      }
+      "src": "admin/.*.php",
+      "use": "@vercel/php"
     }
   ],
   "routes": [
+    {
+      "src": "/admin/(.*)",
+      "dest": "admin/$1.php"
+    },
     {
       "src": "/(.*)",
       "dest": "index.php"
     }
   ],
-  "installCommand": "composer install",
-  "devCommand": "php -S localhost:3000"
+  "env": {
+    "APP_ENV": "production"
+  }
 }
