@@ -1,6 +1,12 @@
 <?php
-require_once __DIR__ . '/includes/db.php';
-require_once __DIR__ . '/includes/functions.php';
+// BASE : préfixe racine du site (vide sur Vercel, "/portfolio" en local XAMPP)
+// https://stackoverflow.com/a/43323991 — marche aussi avec l'URL en production
+$scriptDir = dirname($_SERVER['SCRIPT_NAME'] ?? '');
+$base = ($scriptDir === '/' || $scriptDir === '' || $scriptDir === '\\') ? '' : $scriptDir;
+define('BASE', $base);
+define('ROOT', __DIR__);
+require_once ROOT . '/includes/db.php';
+require_once ROOT . '/includes/functions.php';
 
 $db = getDB();
 

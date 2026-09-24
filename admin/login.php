@@ -1,7 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/db.php';
-require_once __DIR__ . '/../includes/auth.php';
-require_once __DIR__ . '/../includes/functions.php';
+define('ROOT', __DIR__ . '/..');
+require_once ROOT . '/includes/db.php';
+require_once ROOT . '/includes/auth.php';
+require_once ROOT . '/includes/functions.php';
 
 // Déjà connecté → dashboard
 if (is_admin()) {
@@ -102,7 +103,7 @@ $token = csrf_token();
         </button>
       </form>
       <div class="login-footer">
-        <a href="/portfolio/"><i class="fa-solid fa-arrow-left"></i> Retour au site public</a>
+        <a href="<?= BASE ?>/"><i class="fa-solid fa-arrow-left"></i> Retour au site public</a>
       </div>
     </div>
   </div>
