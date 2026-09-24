@@ -31,6 +31,5 @@
   "buildCommand": "composer install",
   "devCommand": "php -S localhost:3000 -t .",
   "installCommand": "composer install",
-  "regions": ["iad1"],
-  "framework": "custom"
+  "regions": ["iad1"]
 }
